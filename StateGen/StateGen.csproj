@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{28107E08-2292-4D66-9298-75AEAA3978E6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StateGen</RootNamespace>
+    <AssemblyName>StateGen</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>true</RegisterForComInterop>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.EA">
+      <HintPath>..\..\..\..\..\Sparx Systems\EA\Interop.EA.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PluginManager\IPlugin.cs" />
+    <Compile Include="PluginManager\PluginManager.cs" />
+    <Compile Include="main.cs" />
+    <Compile Include="PluginManager\Types\PluginType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StateGenSync\StatemachineGeneratorSync.cs" />
+    <Compile Include="StateGenSync\Types\InterfaceType.cs" />
+    <Compile Include="StateGenSync\Types\Activity.cs" />
+    <Compile Include="StateGenSync\Types\Method.cs" />
+    <Compile Include="StateGenSync\Types\Parameter.cs" />
+    <Compile Include="StateGenSync\Types\Row.cs" />
+    <Compile Include="StateGenSync\Types\TransitionTable.cs" />
+    <Compile Include="StateGenSync\Utils\ClassHeaderBuilder.cs" />
+    <Compile Include="StateGenSync\Utils\ClassImplBuilder.cs" />
+    <Compile Include="StateGenSync\Utils\EnumBuilder.cs" />
+    <Compile Include="StateGenSync\Utils\FileWriter.cs" />
+    <Compile Include="StateGenSync\Utils\FsmDataBuilder.cs" />
+    <Compile Include="StateGenSync\Utils\FsmHandlerHeaderBuilder.cs" />
+    <Compile Include="StateGenSync\Utils\FsmHandlerImplBuilder.cs" />
+    <Compile Include="StateGenSync\Utils\IClassHeaderBuilder.cs" />
+    <Compile Include="StateGenSync\Utils\IClassImplBuilder.cs" />
+    <Compile Include="StateGenSync\Utils\IEnumBuilder.cs" />
+    <Compile Include="StateGenSync\Utils\IFileWriter.cs" />
+    <Compile Include="StateGenSync\Utils\IFsmDataBuilder.cs" />
+    <Compile Include="StateGenSync\Utils\IFsmHandlerHeaderBuilder.cs" />
+    <Compile Include="StateGenSync\Utils\IFsmHandlerImplBuilder.cs" />
+    <Compile Include="StateGenSync\Utils\IInterfaceBuilder.cs" />
+    <Compile Include="StateGenSync\Utils\InterfaceBuilder.cs" />
+    <Compile Include="StateGenSync\Utils\IRepositoryHandler.cs" />
+    <Compile Include="StateGenSync\Utils\ITransitionRowBuilder.cs" />
+    <Compile Include="StateGenSync\Utils\RepositoryHandler.cs" />
+    <Compile Include="StateGenSync\Types\ElementType.cs" />
+    <Compile Include="StateGenSync\Types\Product.cs" />
+    <Compile Include="StateGenSync\Types\StateMachineData.cs" />
+    <Compile Include="StateGenSync\Utils\BoostStateMachineBuilder.cs" />
+    <Compile Include="StateGenSync\Utils\EnumUtil.cs" />
+    <Compile Include="StateGenSync\Utils\TableComparer.cs" />
+    <Compile Include="StateGenSync\Utils\TransitionRowBuilder.cs" />
+    <Compile Include="Utils\Log\Log.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

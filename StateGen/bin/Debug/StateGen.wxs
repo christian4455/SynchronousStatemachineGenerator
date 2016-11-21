@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="TARGETDIR">
+            <Directory Id="dir39B22699688E51DCD8DCBB99A47E835B" Name="Debug" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir39B22699688E51DCD8DCBB99A47E835B">
+            <Component Id="cmpEF840AE939E79E4B6EC1BE07D3DD68D3" Guid="*">
+                <Class Id="{04AF062F-A4FB-3E71-8D06-8193240D62DA}" Context="InprocServer32" Description="StateGen.StateGenSync.Utils.EnumBuilder" ThreadingModel="both" ForeignServer="mscoree.dll">
+                    <ProgId Id="StateGen.StateGenSync.Utils.EnumBuilder" Description="StateGen.StateGenSync.Utils.EnumBuilder" />
+                </Class>
+                <Class Id="{0677576C-0400-394D-A561-F53E15351418}" Context="InprocServer32" Description="StateGen.StateGenSync.Utils.ClassHeaderBuilder" ThreadingModel="both" ForeignServer="mscoree.dll">
+                    <ProgId Id="StateGen.StateGenSync.Utils.ClassHeaderBuilder" Description="StateGen.StateGenSync.Utils.ClassHeaderBuilder" />
+                </Class>
+                <Class Id="{1A8FE10C-7B24-3C01-B0C5-278B073EE3FF}" Context="InprocServer32" Description="StateGen.StateGenSync.Types.Product" ThreadingModel="both" ForeignServer="mscoree.dll">
+                    <ProgId Id="StateGen.StateGenSync.Types.Product" Description="StateGen.StateGenSync.Types.Product" />
+                </Class>
+                <Class Id="{21B40CFF-D7C2-3294-B336-D4C77EE9BE15}" Context="InprocServer32" Description="StateGen.StateGenSync.Types.InterfaceType" ThreadingModel="both" ForeignServer="mscoree.dll">
+                    <ProgId Id="StateGen.StateGenSync.Types.InterfaceType" Description="StateGen.StateGenSync.Types.InterfaceType" />
+                </Class>
+                <Class Id="{55DC3C83-7FC0-3CAE-9BB0-4546A049FBB8}" Context="InprocServer32" Description="StateGen.StateGenSync.Types.Activity" ThreadingModel="both" ForeignServer="mscoree.dll">
+                    <ProgId Id="StateGen.StateGenSync.Types.Activity" Description="StateGen.StateGenSync.Types.Activity" />
+                </Class>
+                <Class Id="{695D71BD-467E-3781-894C-922B0C4AB8C6}" Context="InprocServer32" Description="StateGen.StateGenSync.Utils.FsmHandlerImplBuilder" ThreadingModel="both" ForeignServer="mscoree.dll">
+                    <ProgId Id="StateGen.StateGenSync.Utils.FsmHandlerImplBuilder" Description="StateGen.StateGenSync.Utils.FsmHandlerImplBuilder" />
+                </Class>
+                <Class Id="{6A2F149B-90E4-30AE-834C-0BF5EBF42DA3}" Context="InprocServer32" Description="StateGen.StateGenSync.Utils.RepositoryHandler" ThreadingModel="both" ForeignServer="mscoree.dll">
+                    <ProgId Id="StateGen.StateGenSync.Utils.RepositoryHandler" Description="StateGen.StateGenSync.Utils.RepositoryHandler" />
+                </Class>
+                <Class Id="{9F0FE2DF-9D90-3B01-A7BE-32165A9869BE}" Context="InprocServer32" Description="StateGen.main" ThreadingModel="both" ForeignServer="mscoree.dll">
+                    <ProgId Id="StateGen.main" Description="StateGen.main" />
+                </Class>
+                <Class Id="{A0ED36BB-6FE1-3C1A-91F3-C68732EB97A0}" Context="InprocServer32" Description="StateGen.StateGenSync.Types.Parameter" ThreadingModel="both" ForeignServer="mscoree.dll">
+                    <ProgId Id="StateGen.StateGenSync.Types.Parameter" Description="StateGen.StateGenSync.Types.Parameter" />
+                </Class>
+                <Class Id="{BE10FEC3-A779-3A12-BD10-A1E082F7C69B}" Context="InprocServer32" Description="StateGen.StateGenSync.Types.TransitionTable" ThreadingModel="both" ForeignServer="mscoree.dll">
+                    <ProgId Id="StateGen.StateGenSync.Types.TransitionTable" Description="StateGen.StateGenSync.Types.TransitionTable" />
+                </Class>
+                <Class Id="{D43B0BE5-6203-3F61-B84B-5FD86D9722EE}" Context="InprocServer32" Description="StateGen.StateGenSync.Types.StateMachineData" ThreadingModel="both" ForeignServer="mscoree.dll">
+                    <ProgId Id="StateGen.StateGenSync.Types.StateMachineData" Description="StateGen.StateGenSync.Types.StateMachineData" />
+                </Class>
+                <Class Id="{E41DBFE0-234C-3AA0-BEB8-893A0D8B2991}" Context="InprocServer32" Description="StateGen.StateGenSync.Utils.ClassImplBuilder" ThreadingModel="both" ForeignServer="mscoree.dll">
+                    <ProgId Id="StateGen.StateGenSync.Utils.ClassImplBuilder" Description="StateGen.StateGenSync.Utils.ClassImplBuilder" />
+                </Class>
+                <Class Id="{FB0D515F-05EA-33F7-8BC9-3D5D5E79C67D}" Context="InprocServer32" Description="StateGen.StateGenSync.Utils.FsmHandlerHeaderBuilder" ThreadingModel="both" ForeignServer="mscoree.dll">
+                    <ProgId Id="StateGen.StateGenSync.Utils.FsmHandlerHeaderBuilder" Description="StateGen.StateGenSync.Utils.FsmHandlerHeaderBuilder" />
+                </Class>
+                <File Id="fil666C6D85149DE85D325750EDFF166DF2" KeyPath="yes" Source="SourceDir\Debug\StateGen.dll" />
+                <RegistryValue Root="HKCR" Key="CLSID\{04AF062F-A4FB-3E71-8D06-8193240D62DA}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{04AF062F-A4FB-3E71-8D06-8193240D62DA}\InprocServer32\1.0.0.0" Name="Class" Value="StateGen.StateGenSync.Utils.EnumBuilder" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{04AF062F-A4FB-3E71-8D06-8193240D62DA}\InprocServer32\1.0.0.0" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{04AF062F-A4FB-3E71-8D06-8193240D62DA}\InprocServer32\1.0.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{04AF062F-A4FB-3E71-8D06-8193240D62DA}\InprocServer32\1.0.0.0" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{04AF062F-A4FB-3E71-8D06-8193240D62DA}\InprocServer32" Name="Class" Value="StateGen.StateGenSync.Utils.EnumBuilder" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{04AF062F-A4FB-3E71-8D06-8193240D62DA}\InprocServer32" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{04AF062F-A4FB-3E71-8D06-8193240D62DA}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{04AF062F-A4FB-3E71-8D06-8193240D62DA}\InprocServer32" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{0677576C-0400-394D-A561-F53E15351418}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{0677576C-0400-394D-A561-F53E15351418}\InprocServer32\1.0.0.0" Name="Class" Value="StateGen.StateGenSync.Utils.ClassHeaderBuilder" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{0677576C-0400-394D-A561-F53E15351418}\InprocServer32\1.0.0.0" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{0677576C-0400-394D-A561-F53E15351418}\InprocServer32\1.0.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{0677576C-0400-394D-A561-F53E15351418}\InprocServer32\1.0.0.0" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{0677576C-0400-394D-A561-F53E15351418}\InprocServer32" Name="Class" Value="StateGen.StateGenSync.Utils.ClassHeaderBuilder" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{0677576C-0400-394D-A561-F53E15351418}\InprocServer32" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{0677576C-0400-394D-A561-F53E15351418}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{0677576C-0400-394D-A561-F53E15351418}\InprocServer32" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{1A8FE10C-7B24-3C01-B0C5-278B073EE3FF}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{1A8FE10C-7B24-3C01-B0C5-278B073EE3FF}\InprocServer32\1.0.0.0" Name="Class" Value="StateGen.StateGenSync.Types.Product" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{1A8FE10C-7B24-3C01-B0C5-278B073EE3FF}\InprocServer32\1.0.0.0" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{1A8FE10C-7B24-3C01-B0C5-278B073EE3FF}\InprocServer32\1.0.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{1A8FE10C-7B24-3C01-B0C5-278B073EE3FF}\InprocServer32\1.0.0.0" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{1A8FE10C-7B24-3C01-B0C5-278B073EE3FF}\InprocServer32" Name="Class" Value="StateGen.StateGenSync.Types.Product" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{1A8FE10C-7B24-3C01-B0C5-278B073EE3FF}\InprocServer32" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{1A8FE10C-7B24-3C01-B0C5-278B073EE3FF}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{1A8FE10C-7B24-3C01-B0C5-278B073EE3FF}\InprocServer32" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{21B40CFF-D7C2-3294-B336-D4C77EE9BE15}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{21B40CFF-D7C2-3294-B336-D4C77EE9BE15}\InprocServer32\1.0.0.0" Name="Class" Value="StateGen.StateGenSync.Types.InterfaceType" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{21B40CFF-D7C2-3294-B336-D4C77EE9BE15}\InprocServer32\1.0.0.0" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{21B40CFF-D7C2-3294-B336-D4C77EE9BE15}\InprocServer32\1.0.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{21B40CFF-D7C2-3294-B336-D4C77EE9BE15}\InprocServer32\1.0.0.0" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{21B40CFF-D7C2-3294-B336-D4C77EE9BE15}\InprocServer32" Name="Class" Value="StateGen.StateGenSync.Types.InterfaceType" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{21B40CFF-D7C2-3294-B336-D4C77EE9BE15}\InprocServer32" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{21B40CFF-D7C2-3294-B336-D4C77EE9BE15}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{21B40CFF-D7C2-3294-B336-D4C77EE9BE15}\InprocServer32" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{55DC3C83-7FC0-3CAE-9BB0-4546A049FBB8}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{55DC3C83-7FC0-3CAE-9BB0-4546A049FBB8}\InprocServer32\1.0.0.0" Name="Class" Value="StateGen.StateGenSync.Types.Activity" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{55DC3C83-7FC0-3CAE-9BB0-4546A049FBB8}\InprocServer32\1.0.0.0" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{55DC3C83-7FC0-3CAE-9BB0-4546A049FBB8}\InprocServer32\1.0.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{55DC3C83-7FC0-3CAE-9BB0-4546A049FBB8}\InprocServer32\1.0.0.0" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{55DC3C83-7FC0-3CAE-9BB0-4546A049FBB8}\InprocServer32" Name="Class" Value="StateGen.StateGenSync.Types.Activity" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{55DC3C83-7FC0-3CAE-9BB0-4546A049FBB8}\InprocServer32" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{55DC3C83-7FC0-3CAE-9BB0-4546A049FBB8}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{55DC3C83-7FC0-3CAE-9BB0-4546A049FBB8}\InprocServer32" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{695D71BD-467E-3781-894C-922B0C4AB8C6}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{695D71BD-467E-3781-894C-922B0C4AB8C6}\InprocServer32\1.0.0.0" Name="Class" Value="StateGen.StateGenSync.Utils.FsmHandlerImplBuilder" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{695D71BD-467E-3781-894C-922B0C4AB8C6}\InprocServer32\1.0.0.0" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{695D71BD-467E-3781-894C-922B0C4AB8C6}\InprocServer32\1.0.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{695D71BD-467E-3781-894C-922B0C4AB8C6}\InprocServer32\1.0.0.0" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{695D71BD-467E-3781-894C-922B0C4AB8C6}\InprocServer32" Name="Class" Value="StateGen.StateGenSync.Utils.FsmHandlerImplBuilder" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{695D71BD-467E-3781-894C-922B0C4AB8C6}\InprocServer32" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{695D71BD-467E-3781-894C-922B0C4AB8C6}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{695D71BD-467E-3781-894C-922B0C4AB8C6}\InprocServer32" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{6A2F149B-90E4-30AE-834C-0BF5EBF42DA3}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{6A2F149B-90E4-30AE-834C-0BF5EBF42DA3}\InprocServer32\1.0.0.0" Name="Class" Value="StateGen.StateGenSync.Utils.RepositoryHandler" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{6A2F149B-90E4-30AE-834C-0BF5EBF42DA3}\InprocServer32\1.0.0.0" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{6A2F149B-90E4-30AE-834C-0BF5EBF42DA3}\InprocServer32\1.0.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{6A2F149B-90E4-30AE-834C-0BF5EBF42DA3}\InprocServer32\1.0.0.0" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{6A2F149B-90E4-30AE-834C-0BF5EBF42DA3}\InprocServer32" Name="Class" Value="StateGen.StateGenSync.Utils.RepositoryHandler" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{6A2F149B-90E4-30AE-834C-0BF5EBF42DA3}\InprocServer32" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{6A2F149B-90E4-30AE-834C-0BF5EBF42DA3}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{6A2F149B-90E4-30AE-834C-0BF5EBF42DA3}\InprocServer32" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{9F0FE2DF-9D90-3B01-A7BE-32165A9869BE}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{9F0FE2DF-9D90-3B01-A7BE-32165A9869BE}\InprocServer32\1.0.0.0" Name="Class" Value="StateGen.main" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{9F0FE2DF-9D90-3B01-A7BE-32165A9869BE}\InprocServer32\1.0.0.0" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{9F0FE2DF-9D90-3B01-A7BE-32165A9869BE}\InprocServer32\1.0.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{9F0FE2DF-9D90-3B01-A7BE-32165A9869BE}\InprocServer32\1.0.0.0" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{9F0FE2DF-9D90-3B01-A7BE-32165A9869BE}\InprocServer32" Name="Class" Value="StateGen.main" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{9F0FE2DF-9D90-3B01-A7BE-32165A9869BE}\InprocServer32" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{9F0FE2DF-9D90-3B01-A7BE-32165A9869BE}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{9F0FE2DF-9D90-3B01-A7BE-32165A9869BE}\InprocServer32" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{A0ED36BB-6FE1-3C1A-91F3-C68732EB97A0}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{A0ED36BB-6FE1-3C1A-91F3-C68732EB97A0}\InprocServer32\1.0.0.0" Name="Class" Value="StateGen.StateGenSync.Types.Parameter" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{A0ED36BB-6FE1-3C1A-91F3-C68732EB97A0}\InprocServer32\1.0.0.0" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{A0ED36BB-6FE1-3C1A-91F3-C68732EB97A0}\InprocServer32\1.0.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{A0ED36BB-6FE1-3C1A-91F3-C68732EB97A0}\InprocServer32\1.0.0.0" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{A0ED36BB-6FE1-3C1A-91F3-C68732EB97A0}\InprocServer32" Name="Class" Value="StateGen.StateGenSync.Types.Parameter" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{A0ED36BB-6FE1-3C1A-91F3-C68732EB97A0}\InprocServer32" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{A0ED36BB-6FE1-3C1A-91F3-C68732EB97A0}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{A0ED36BB-6FE1-3C1A-91F3-C68732EB97A0}\InprocServer32" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{BE10FEC3-A779-3A12-BD10-A1E082F7C69B}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{BE10FEC3-A779-3A12-BD10-A1E082F7C69B}\InprocServer32\1.0.0.0" Name="Class" Value="StateGen.StateGenSync.Types.TransitionTable" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{BE10FEC3-A779-3A12-BD10-A1E082F7C69B}\InprocServer32\1.0.0.0" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{BE10FEC3-A779-3A12-BD10-A1E082F7C69B}\InprocServer32\1.0.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{BE10FEC3-A779-3A12-BD10-A1E082F7C69B}\InprocServer32\1.0.0.0" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{BE10FEC3-A779-3A12-BD10-A1E082F7C69B}\InprocServer32" Name="Class" Value="StateGen.StateGenSync.Types.TransitionTable" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{BE10FEC3-A779-3A12-BD10-A1E082F7C69B}\InprocServer32" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{BE10FEC3-A779-3A12-BD10-A1E082F7C69B}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{BE10FEC3-A779-3A12-BD10-A1E082F7C69B}\InprocServer32" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{D43B0BE5-6203-3F61-B84B-5FD86D9722EE}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{D43B0BE5-6203-3F61-B84B-5FD86D9722EE}\InprocServer32\1.0.0.0" Name="Class" Value="StateGen.StateGenSync.Types.StateMachineData" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{D43B0BE5-6203-3F61-B84B-5FD86D9722EE}\InprocServer32\1.0.0.0" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{D43B0BE5-6203-3F61-B84B-5FD86D9722EE}\InprocServer32\1.0.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{D43B0BE5-6203-3F61-B84B-5FD86D9722EE}\InprocServer32\1.0.0.0" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{D43B0BE5-6203-3F61-B84B-5FD86D9722EE}\InprocServer32" Name="Class" Value="StateGen.StateGenSync.Types.StateMachineData" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{D43B0BE5-6203-3F61-B84B-5FD86D9722EE}\InprocServer32" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{D43B0BE5-6203-3F61-B84B-5FD86D9722EE}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{D43B0BE5-6203-3F61-B84B-5FD86D9722EE}\InprocServer32" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{E41DBFE0-234C-3AA0-BEB8-893A0D8B2991}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{E41DBFE0-234C-3AA0-BEB8-893A0D8B2991}\InprocServer32\1.0.0.0" Name="Class" Value="StateGen.StateGenSync.Utils.ClassImplBuilder" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{E41DBFE0-234C-3AA0-BEB8-893A0D8B2991}\InprocServer32\1.0.0.0" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{E41DBFE0-234C-3AA0-BEB8-893A0D8B2991}\InprocServer32\1.0.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{E41DBFE0-234C-3AA0-BEB8-893A0D8B2991}\InprocServer32\1.0.0.0" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{E41DBFE0-234C-3AA0-BEB8-893A0D8B2991}\InprocServer32" Name="Class" Value="StateGen.StateGenSync.Utils.ClassImplBuilder" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{E41DBFE0-234C-3AA0-BEB8-893A0D8B2991}\InprocServer32" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{E41DBFE0-234C-3AA0-BEB8-893A0D8B2991}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{E41DBFE0-234C-3AA0-BEB8-893A0D8B2991}\InprocServer32" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{FB0D515F-05EA-33F7-8BC9-3D5D5E79C67D}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{FB0D515F-05EA-33F7-8BC9-3D5D5E79C67D}\InprocServer32\1.0.0.0" Name="Class" Value="StateGen.StateGenSync.Utils.FsmHandlerHeaderBuilder" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{FB0D515F-05EA-33F7-8BC9-3D5D5E79C67D}\InprocServer32\1.0.0.0" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{FB0D515F-05EA-33F7-8BC9-3D5D5E79C67D}\InprocServer32\1.0.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{FB0D515F-05EA-33F7-8BC9-3D5D5E79C67D}\InprocServer32\1.0.0.0" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{FB0D515F-05EA-33F7-8BC9-3D5D5E79C67D}\InprocServer32" Name="Class" Value="StateGen.StateGenSync.Utils.FsmHandlerHeaderBuilder" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{FB0D515F-05EA-33F7-8BC9-3D5D5E79C67D}\InprocServer32" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{FB0D515F-05EA-33F7-8BC9-3D5D5E79C67D}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{FB0D515F-05EA-33F7-8BC9-3D5D5E79C67D}\InprocServer32" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="Record\{7AE62B36-1560-37F1-B29C-C715F7D8682A}\1.0.0.0" Name="Class" Value="StateGen.StateGenSync.Types.ElementType" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="Record\{7AE62B36-1560-37F1-B29C-C715F7D8682A}\1.0.0.0" Name="Assembly" Value="StateGen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="Record\{7AE62B36-1560-37F1-B29C-C715F7D8682A}\1.0.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="Record\{7AE62B36-1560-37F1-B29C-C715F7D8682A}\1.0.0.0" Name="CodeBase" Value="file:///[#fil666C6D85149DE85D325750EDFF166DF2]" Type="string" Action="write" />
+            </Component>
+        </DirectoryRef>
+    </Fragment>
+</Wix>

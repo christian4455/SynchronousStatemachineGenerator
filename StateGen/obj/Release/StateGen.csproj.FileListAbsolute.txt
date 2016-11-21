@@ -1,0 +1,6 @@
+D:\Projekte\StateMachineGeneratorSync\Dev\StateGen\StateGen\bin\Release\StateGen.dll
+D:\Projekte\StateMachineGeneratorSync\Dev\StateGen\StateGen\bin\Release\StateGen.pdb
+D:\Projekte\StateMachineGeneratorSync\Dev\StateGen\StateGen\obj\Release\StateGen.dll
+D:\Projekte\StateMachineGeneratorSync\Dev\StateGen\StateGen\obj\Release\StateGen.pdb
+D:\Projekte\StateMachineGeneratorSync\Dev\StateGen\StateGen\bin\Release\StateGen.tlb
+D:\Projekte\StateMachineGeneratorSync\Dev\StateGen\StateGen\obj\Release\StateGen.csprojResolveAssemblyReference.cache

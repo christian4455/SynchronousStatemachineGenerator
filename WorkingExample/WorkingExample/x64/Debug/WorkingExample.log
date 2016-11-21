@@ -1,0 +1,7 @@
+﻿  WorkingExample.cpp
+  stdafx.cpp
+  FsmHandler.cpp
+  ConditionHandler.cpp
+  ActionHandler.cpp
+  Generating Code...
+  WorkingExample.vcxproj -> C:\Users\Christian\Desktop\SynchronousStatemachineGeneratorNeu\WorkingExample\x64\Debug\WorkingExample.exe
