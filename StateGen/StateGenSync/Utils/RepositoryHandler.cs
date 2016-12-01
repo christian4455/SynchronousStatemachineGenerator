@@ -109,7 +109,12 @@ namespace StateGen.StateGenSync.Utils
                 Activity finalNextActivity = new Activity(nextActivity.Name.ToString(), EnumUtil.ParseEnum<ElementType>(nextActivity.Type, ElementType.Unknown), nextActivity.ElementID);
 
                 Row row = new Row(finalCurrentActivity, "", nextActivity.Name.ToString(), finalNextActivity, transitionguard, connectorID);
-                m_Data.AddRow(row);
+
+                // check if row already exists
+                if (!m_Data.Containes(row))
+                {
+                    m_Data.AddRow(row);
+                }
             }
         }
 
@@ -122,7 +127,7 @@ namespace StateGen.StateGenSync.Utils
         {
             foreach (Row roi in m_Data.GetTransitionTable().GetRows())
             {
-                if (roi.GetNextActivity().GetElementType() != ElementType.Decision || roi.GetNextActivity().GetElementType() != ElementType.Activity)
+                if ((roi.GetNextActivity().GetElementType() != ElementType.Activity) && (roi.GetNextActivity().GetElementType() != ElementType.Decision))
                 {
                     Log.Info("dirtyActivity=" + roi.GetNextActivity().GetName() + " elementType=" + roi.GetNextActivity().GetElementType());
                     EA.Connector dirtyConnector = m_DiagramOfInterest.GetConnectorByID(roi.GetID());

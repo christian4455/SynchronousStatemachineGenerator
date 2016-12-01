@@ -4,3 +4,13 @@ D:\Projekte\StateMachineGeneratorSync\Dev\StateGen\StateGen\bin\Debug\StateGen.t
 D:\Projekte\StateMachineGeneratorSync\Dev\StateGen\StateGen\obj\Debug\StateGen.dll
 D:\Projekte\StateMachineGeneratorSync\Dev\StateGen\StateGen\obj\Debug\StateGen.pdb
 D:\Projekte\StateMachineGeneratorSync\Dev\StateGen\StateGen\obj\Debug\StateGen.csprojResolveAssemblyReference.cache
+D:\dev\KalmanFilter\SynchronousStatemachineGenerator\StateGen\bin\Debug\StateGen.dll
+D:\dev\KalmanFilter\SynchronousStatemachineGenerator\StateGen\bin\Debug\StateGen.pdb
+D:\dev\KalmanFilter\SynchronousStatemachineGenerator\StateGen\bin\Debug\StateGen.tlb
+D:\dev\KalmanFilter\SynchronousStatemachineGenerator\StateGen\obj\Debug\StateGen.dll
+D:\dev\KalmanFilter\SynchronousStatemachineGenerator\StateGen\obj\Debug\StateGen.pdb
+C:\Users\Christian\Desktop\SynchronousStatemachineGeneratorKorrektur\StateGen\bin\Debug\StateGen.dll
+C:\Users\Christian\Desktop\SynchronousStatemachineGeneratorKorrektur\StateGen\bin\Debug\StateGen.pdb
+C:\Users\Christian\Desktop\SynchronousStatemachineGeneratorKorrektur\StateGen\obj\Debug\StateGen.csprojResolveAssemblyReference.cache
+C:\Users\Christian\Desktop\SynchronousStatemachineGeneratorKorrektur\StateGen\obj\Debug\StateGen.dll
+C:\Users\Christian\Desktop\SynchronousStatemachineGeneratorKorrektur\StateGen\obj\Debug\StateGen.pdb

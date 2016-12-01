@@ -36,6 +36,22 @@ namespace StateGen.StateGenSync.Types
             m_TransitionTable.AddRow(row);
         }
 
+        public bool Containes(Row row)
+        {
+            bool result = false;
+
+            foreach (Row r in m_TransitionTable.GetRows())
+            {
+                if (r.GetID() == row.GetID())
+                {
+                    result = true;
+                    break;
+                }
+            }
+
+            return result;
+        }
+
         public TransitionTable GetTransitionTable()
         {
             return m_TransitionTable;
