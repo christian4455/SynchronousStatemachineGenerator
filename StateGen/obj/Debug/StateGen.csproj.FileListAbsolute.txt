@@ -14,3 +14,8 @@ C:\Users\Christian\Desktop\SynchronousStatemachineGeneratorKorrektur\StateGen\bi
 C:\Users\Christian\Desktop\SynchronousStatemachineGeneratorKorrektur\StateGen\obj\Debug\StateGen.csprojResolveAssemblyReference.cache
 C:\Users\Christian\Desktop\SynchronousStatemachineGeneratorKorrektur\StateGen\obj\Debug\StateGen.dll
 C:\Users\Christian\Desktop\SynchronousStatemachineGeneratorKorrektur\StateGen\obj\Debug\StateGen.pdb
+C:\Users\Christian\Desktop\SynchronousStatemachineGenerator\StateGen\obj\Debug\StateGen.dll
+C:\Users\Christian\Desktop\SynchronousStatemachineGenerator\StateGen\obj\Debug\StateGen.pdb
+C:\Users\Christian\Desktop\SynchronousStatemachineGenerator\StateGen\bin\Debug\StateGen.dll
+C:\Users\Christian\Desktop\SynchronousStatemachineGenerator\StateGen\bin\Debug\StateGen.pdb
+C:\Users\Christian\Desktop\SynchronousStatemachineGenerator\StateGen\bin\Debug\StateGen.tlb

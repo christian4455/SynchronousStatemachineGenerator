@@ -42,6 +42,8 @@ namespace StateGen.StateGenSync.Utils
             m_Data.GetTransitionTable().PrintTable();
 
             CleanUpTransitionTable();
+
+            DeleteMergeNodeRows();
             Log.Info("cleaned");
             m_Data.GetTransitionTable().PrintTable();
 
@@ -49,16 +51,6 @@ namespace StateGen.StateGenSync.Utils
 
             Log.Info("sorted");
             m_Data.GetTransitionTable().PrintTable();
-
-            Activity errorCurrentActivity = new Activity("Any", ElementType.Activity, -1);
-
-            string errorTransitionGuard = "";
-
-            Activity errorNextActivity = new Activity("ActivityFinal", ElementType.Activity, -1);
-
-            Row errorRow = new Row(errorCurrentActivity, "", "FsmError", errorNextActivity, errorTransitionGuard, -1);
-
-            m_Data.GetTransitionTable().AddRow(errorRow);
 
             FillActionsAndGuards();
 
@@ -82,6 +74,41 @@ namespace StateGen.StateGenSync.Utils
                 {
                     HandleStateNode(element);
                     break;
+                }
+                case ElementType.Decision:
+                {
+                    HandleDecision(element);
+                    break;
+                }
+            }
+        }
+
+        private void HandleDecision(EA.Element element)
+        {
+            foreach (EA.Connector c in element.Connectors)
+            {
+                Int32 supplierID = c.SupplierID;
+                EA.Element nextActivity = m_DiagramOfInterest.GetElementByID(supplierID);
+
+                ElementType type = EnumUtil.ParseEnum<ElementType>(nextActivity.Type, ElementType.Unknown);
+                if (type == ElementType.MergeNode)
+                {
+                    Int32 clientID = c.ClientID;
+                    EA.Element currentActivity = m_DiagramOfInterest.GetElementByID(clientID);
+
+                    string transitionguard = c.TransitionGuard.ToString();
+                    Int32 connectorID = c.ConnectorID;
+
+                    Activity finalCurrentActivity = new Activity(currentActivity.Name.ToString(), EnumUtil.ParseEnum<ElementType>(currentActivity.Type, ElementType.Unknown), currentActivity.ElementID);
+                    Activity finalNextActivity = new Activity(nextActivity.Name.ToString(), EnumUtil.ParseEnum<ElementType>(nextActivity.Type, ElementType.Unknown), nextActivity.ElementID);
+
+                    Row row = new Row(finalCurrentActivity, "", nextActivity.Name.ToString(), finalNextActivity, transitionguard, connectorID);
+
+                    // check if row already exists
+                    if (!m_Data.Containes(row))
+                    {
+                        m_Data.AddRow(row);
+                    }
                 }
             }
         }
@@ -120,7 +147,32 @@ namespace StateGen.StateGenSync.Utils
 
         private void HandleStateNode(EA.Element stateNode)
         {
-           // MessageBox.Show("stateNode=" + stateNode.Name.ToString());
+            foreach (EA.Connector c in stateNode.Connectors)
+            {
+                // MessageBox.Show("connectorID=" + c.ConnectorID.ToString());
+                Log.Info("connectorID=" + c.ConnectorID.ToString());
+
+                Int32 clientID = c.ClientID;
+                EA.Element currentActivity = m_DiagramOfInterest.GetElementByID(clientID);
+
+                Int32 supplierID = c.SupplierID;
+                EA.Element nextActivity = m_DiagramOfInterest.GetElementByID(supplierID);
+
+                string transitionguard = c.TransitionGuard.ToString();
+                Int32 connectorID = c.ConnectorID;
+
+
+                Activity finalCurrentActivity = new Activity(currentActivity.Name.ToString(), EnumUtil.ParseEnum<ElementType>(currentActivity.Type, ElementType.Unknown), currentActivity.ElementID);
+                Activity finalNextActivity = new Activity(nextActivity.Name.ToString(), EnumUtil.ParseEnum<ElementType>(nextActivity.Type, ElementType.Unknown), nextActivity.ElementID);
+
+                Row row = new Row(finalCurrentActivity, "", nextActivity.Name.ToString(), finalNextActivity, transitionguard, connectorID);
+
+                // check if row already exists
+                if (!m_Data.Containes(row))
+                {
+                    m_Data.AddRow(row);
+                }
+            }
         }
 
         private void CleanUpTransitionTable()
@@ -139,14 +191,23 @@ namespace StateGen.StateGenSync.Utils
                     foreach (EA.Connector c in dirtyActivity.Connectors)
                     {
                         EA.Element possibleActivity = m_DiagramOfInterest.GetElementByID(c.SupplierID);
-                        foreach (Row r in m_Data.GetTransitionTable().GetRows())
+
+                        if (possibleActivity.Name == "ActivityFinal")
                         {
-                            if (possibleActivity.Name == r.GetCurrentActivity().GetName())
+                            correctNextActivity = new Activity(possibleActivity.Name, EnumUtil.ParseEnum<ElementType>(possibleActivity.Type, ElementType.Unknown), possibleActivity.ElementID);
+                            isCleanedUp = true;
+                        }
+                        else
+                        {
+                            foreach (Row r in m_Data.GetTransitionTable().GetRows())
                             {
-                                correctNextActivity = new Activity(possibleActivity.Name, EnumUtil.ParseEnum<ElementType>(possibleActivity.Type, ElementType.Unknown), possibleActivity.ElementID);
-                                isCleanedUp = true;
+                                if (possibleActivity.Name == r.GetCurrentActivity().GetName() && (r.GetCurrentActivity().GetElementType() ==  ElementType.StateNode || r.GetCurrentActivity().GetElementType() == ElementType.Activity))
+                                {
+                                    correctNextActivity = new Activity(possibleActivity.Name, EnumUtil.ParseEnum<ElementType>(possibleActivity.Type, ElementType.Unknown), possibleActivity.ElementID);
+                                    isCleanedUp = true;
+                                }
                             }
-                        }     
+                        }
                     }
 
                     if (isCleanedUp)
@@ -154,6 +215,22 @@ namespace StateGen.StateGenSync.Utils
                         roi.SetNextActivity(correctNextActivity);
                         roi.SetAction(correctNextActivity.GetName());
                     }
+                    else
+                    {
+                        m_Data.GetTransitionTable().GetRows().Remove(roi);
+                    }
+                }
+            }
+        }
+
+        private void DeleteMergeNodeRows()
+        {
+            for (int i = 0; i < m_Data.GetTransitionTable().GetRows().Count; i++)
+            {
+                if (m_Data.GetTransitionTable().GetRows()[i].GetCurrentActivity().GetElementType() == ElementType.MergeNode)
+                {
+                    m_Data.GetTransitionTable().GetRows().RemoveAt(i);
+                    i--;
                 }
             }
         }
@@ -168,12 +245,39 @@ namespace StateGen.StateGenSync.Utils
                 if (r.GetNextActivity().GetElementType() == ElementType.Decision)
                 {
                     Method pseudoAction = new Method(r.GetAction(), "void");
-                    m_Data.AddPseudoAction(pseudoAction);
+
+                    bool match = false;
+                    foreach (Method p in m_Data.GetPseudoActions())
+                    {
+                        if (p.GetFunctionName() == pseudoAction.GetFunctionName())
+                        {
+                            match = true;
+                        }
+                    }
+
+                    if (!match)
+                    {
+                        m_Data.AddPseudoAction(pseudoAction);
+                    }
                 }
                 else
                 {
                     Method action = new Method(r.GetAction(), "void");
-                    m_Data.AddAction(action);
+
+                    bool match = false;
+
+                    foreach (Method p in m_Data.GetActions())
+                    {
+                        if (p.GetFunctionName() == action.GetFunctionName())
+                        {
+                            match = true;
+                        }
+                    }
+
+                    if (!match)
+                    {
+                        m_Data.AddAction(action);
+                    }
                 }
             }
         }

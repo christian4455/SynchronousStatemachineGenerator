@@ -29,6 +29,16 @@ namespace StateGen.StateGenSync.Types
             Method start = new Method("Start", "void");
             m_Fsm.AddMethod(start);
             m_Fsm.SetInterfaceName("IFsmHandler");
+
+            //Activity errorCurrentActivity = new Activity("Any", ElementType.Activity, -1);
+
+            //string errorTransitionGuard = "";
+
+            //Activity errorNextActivity = new Activity("ActivityFinal", ElementType.Activity, -1);
+
+            //Row errorRow = new Row(errorCurrentActivity, "", "FsmError", errorNextActivity, errorTransitionGuard, -1);
+
+            //GetTransitionTable().AddRow(errorRow);
         }
 
         public void AddRow(Row row)
