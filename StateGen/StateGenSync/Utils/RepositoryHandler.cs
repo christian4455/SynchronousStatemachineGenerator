@@ -110,6 +110,25 @@ namespace StateGen.StateGenSync.Utils
                         m_Data.AddRow(row);
                     }
                 }
+                else if(type == ElementType.Decision)
+                {
+                    Int32 clientID = c.ClientID;
+                    EA.Element currentActivity = m_DiagramOfInterest.GetElementByID(clientID);
+
+                    string transitionguard = c.TransitionGuard.ToString();
+                    Int32 connectorID = c.ConnectorID;
+
+                    Activity finalCurrentActivity = new Activity(currentActivity.Name.ToString(), EnumUtil.ParseEnum<ElementType>(currentActivity.Type, ElementType.Unknown), currentActivity.ElementID);
+                    Activity finalNextActivity = new Activity(nextActivity.Name.ToString(), EnumUtil.ParseEnum<ElementType>(nextActivity.Type, ElementType.Unknown), nextActivity.ElementID);
+
+                    Row row = new Row(finalCurrentActivity, "", nextActivity.Name.ToString(), finalNextActivity, transitionguard, connectorID);
+
+                    // check if row already exists
+                    if (!m_Data.Containes(row))
+                    {
+                        m_Data.AddRow(row);
+                    }
+                }
             }
         }
 
